@@ -1,0 +1,567 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.offer-box{
+    background: #1d232c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px 0;
+    gap:70px;
+}
+
+.offer-box i{
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navbar h1{
+    font-weight: 650;
+}
+
+.navbar i{
+    display: none;
+    cursor: pointer;
+}
+
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    gap:40px;
+}
+
+.navbar__menu li a{
+    text-decoration: none;
+    color:#1d232c
+}
+
+main{
+    padding: 0 15px;
+}
+
+.side-nav{
+    position: fixed;
+    top:0;
+    right: 0;
+    z-index: 1;
+    width:50vw;
+    height: 100%;
+    background: #1d232c;
+    margin-right:-60%;
+    transition: 1s;
+    display: none;
+    z-index: 11;
+}
+
+.side-nav .close{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+.side-nav__menus{
+    margin-top: 30px;
+    margin-left: 10px;
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    
+}
+
+.side-nav__menus li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.side-nav__menus li:hover{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: 1s;
+}
+
+.side-nav__menus li a{
+    text-decoration: none;
+    color:white;
+
+}
+
+
+@media screen and (max-width:800px){
+    .navbar__menu{
+        display: none;
+    }
+
+    .navbar i{
+        display: block;
+        font-size:20px;
+    }
+
+    .side-nav{
+        display: flex;
+    }
+}
+
+.slider{
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__img{
+    display: flex;
+}
+
+ .slider__imgs{
+    width: 100vw;
+    transition: 1s;
+} 
+
+.left-arrow,.right-arrow{
+    position: absolute;
+    font-size: 5vw;
+    top:40%;
+}
+
+.left-arrow{
+    left: 5%;
+}
+
+.right-arrow{
+    right: 5%;
+}
+
+.slider__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top:30%;
+    left:20%;
+    font-size: 2vw;
+}
+
+.slider__content button a{
+    text-decoration: none;
+    color:#1d232c;
+}
+
+.slider__content button{
+    padding:1vw 2vw;
+    border: none;
+    margin-top: 5px;
+}
+
+.brands-container{
+    margin-top: 30px;
+}
+
+.brands-list{
+    display: flex;
+    gap:10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.brand{
+    flex-basis: 10%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.brand p{
+    margin-top: 5px;
+    font-size: 2vw;
+}
+
+.brands-list img{
+    width:5vw;
+}
+
+.experience{
+    margin-top: 40px;
+}
+
+.experience__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5vw;
+}
+
+.service-container{
+    margin-top: 20px;
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.service{
+    background:#F2F4F7;
+    padding:10px;
+    font-size: 1vw;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+@media screen and (max-width:800px){
+    .service{
+        flex-grow: 1;
+        flex-basis: 40%;
+        font-size: 2vw;
+    }
+}
+
+.arrivals{
+    margin-top: 30px;
+}
+
+.arrivals__cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:40px;
+    flex-wrap: wrap;
+}
+
+.arrivals__card{
+    flex-basis: 20%;
+    height: 40vh;
+    flex-grow: 1;
+    position: relative;
+    border-radius: 5px;
+}
+
+.arrivals__card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.arrivals__card .overlay{
+    background: #00000068;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    top:0;
+    position: absolute;
+}
+
+.arrivals__card button a{
+    text-decoration: none;
+    color:black;
+}
+
+.arrivals__card button{
+    padding:10px 20px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top:80%;
+    left:30%;
+    z-index:2;
+}
+
+@media screen and (max-width:800px){
+    .arrivals__card{
+        flex-basis: 35%;
+        flex-grow: 1;
+        height: 30%;
+    }
+
+    .arrivals__card button{
+        padding: 5px 10px;
+    }
+
+}
+
+.most-wanted{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dress-container{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap:40px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 30px;
+}
+
+.dress-container::-webkit-scrollbar {
+    display: none;
+}
+
+.dress-card{
+    width:250px;
+    height:250px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.dress-card p{
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgb(115, 115, 98);
+    color:white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.5vw;
+}
+
+.dress-card .dress{
+    width:250px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.black-heart{
+    position: absolute;
+    width: 30px;
+    right: 5%;
+    bottom: 5%;
+}
+
+.limited{
+    display: flex;
+    padding: 30px 50px;
+    background: #1d232c;
+    align-items: center;
+    gap:50px;
+    font-size: 1.5vw;
+    color:white;
+    margin: 30px 0;
+}
+
+.limited img{
+    width: 50vw;
+}
+
+.limited button{
+    border: none;
+    background: white;
+    padding:10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.limited button a {
+    text-decoration: none;
+    color:black ;   
+}
+
+@media screen and (max-width:800px){
+    .limited{
+        flex-direction: column;
+    }
+}
+
+.join{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    padding: 40px;
+
+}
+
+.join input{
+    width: 100%;
+    margin:10px 0;
+    border:2px solid #1d232c;
+    border-radius: 2px;
+    padding:10px 0;
+}
+
+.join button{
+    background: #000;
+    color:white;
+    border: none;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+footer{
+    background: #1d232c;
+    color:white;
+    padding:50px;
+}
+
+.social-media{
+    display: flex;
+    gap:20px;
+    margin: 10px 0;
+}
+
+.social-media i{
+    font-size: 24px;   
+}
+
+.categories{
+    font-size:2vw;
+    margin-bottom: 20px;
+}
+
+.categories-container{
+    width: 250px;
+    padding:0 20px;
+    margin-top: 30px;
+    border-right: solid 5px black;
+}
+
+.main-page{
+    display: flex;
+}
+
+.collections{
+    margin-top: 30px;
+    padding:0 20px;
+    width: 100%;
+}
+
+.search-box{
+    position: relative;
+}
+
+.search-box input{
+    width: 100%;
+    padding:10px 20px;
+    border-radius: 3px;
+    outline: none;
+    border: black 1px solid;
+}
+
+.search-box i{
+    position: absolute;
+    right: 10px;
+    top:10px;
+}
+
+.dress-collections{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.dresses{
+    display: flex;
+    flex-basis: 30%;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.dresses img{
+    width: 100%;
+}
+
+@media screen and (max-width:700px){
+    .dresses{
+        display: flex;
+        flex-basis: 40%;
+        margin-top: 20px;
+        font-size: 1.5vw;
+        flex-direction: column;
+    }
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.contact{
+    background: #1d232c;
+    padding:50px;
+    width: 80%;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width:700px) {
+    .contact{
+        font-size: 2.5vw;
+    }
+}
+
+.contact h3{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact label{
+    display: block;
+    color:white;
+    margin:10px 0;
+}
+
+.contact input{
+    padding:15px 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+}
+
+textarea{
+    resize: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    width: 100%;
+    height: 150px;
+}
+
+.contact button{
+    background: rgba(0, 94, 255, 0.626);
+    border: none;
+    color:white;
+    font-size: 1.2vw;
+    padding:10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover{
+    opacity: 0.8;
+}
